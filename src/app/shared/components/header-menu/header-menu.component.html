@@ -1,0 +1,31 @@
+<nav #header class="header-menu">
+  <a href="#" title="bilbo">
+    <img class="brand" alt="logo" width="50" src="assets/avatar.png">
+  </a>
+  <div #dropdown class="dropdown">
+    <button class="dropdown-toggler" type="button" (click)="dropdown?.toggle()">
+      <img class="avatar" alt="avatar" src="assets/avatar.png">
+      <span class="username">Felipe Francischetto</span>
+    </button>
+    <ul class="dropdown-menu" [class.show]="dropdown.show">
+      <li class="dropdown-item">
+        <a>
+          <i class="icon"></i>
+          <span>Meu Pefil</span>
+        </a>
+      </li>
+      <li class="dropdown-item">
+        <a>
+          <i class="icon"></i>
+          <span>As Minhas Preferências</span>
+        </a>
+      </li>
+      <li class="dropdown-item">
+        <a>
+          <i class="icon"></i>
+          <span>Terminar Sessão</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
