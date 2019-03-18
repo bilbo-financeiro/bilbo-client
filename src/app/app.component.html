@@ -1,1 +1,14 @@
-<app-header-menu></app-header-menu>
+<div class="wrapper">
+  <header class="header">
+    <app-header-menu [userInfo]="userInfo"></app-header-menu>
+  </header>
+
+  <div class="content">
+    <aside class="sidebar">
+      <app-side-menu></app-side-menu>
+    </aside>
+    <main class="main">Content</main>
+  </div>
+
+  <!-- <footer class="footer">Footer</footer> -->
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-menu',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderMenuComponent implements OnInit {
 
+  @Input() public userInfo: any;
+  public dropdownShow = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  public toggle(): void {
+    this.dropdownShow = !this.dropdownShow;
+  }
+
+  public logout(): void {
+    console.log('tem certeza que deseja sair ?');
+  }
 }

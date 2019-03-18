@@ -1,0 +1,16 @@
+<div class="side-menu" [class.expanded]="expanded">
+  <button class="side-menu-toggler" type="button" (click)="toggle()">
+    tooggle
+    <i class="icon"></i>
+  </button>
+
+  <ul class="side-menu-items" *ngIf="expanded" [@togglerAnimation]>
+    <li class="side-menu-item">
+      <a href="#">
+        <i class="icon"></i>
+        <span>Overview</span>
+      </a>
+    </li>
+  </ul>
+
+</div>

@@ -1,27 +1,27 @@
 <nav #header class="header-menu">
   <a href="#" title="bilbo">
-    <img class="brand" alt="logo" width="50" src="assets/avatar.png">
+    <img class="brand" alt="logo" width="50" src="assets/bilbo.png">
   </a>
   <div #dropdown class="dropdown">
-    <button class="dropdown-toggler" type="button" (click)="dropdown?.toggle()">
-      <img class="avatar" alt="avatar" src="assets/avatar.png">
-      <span class="username">Felipe Francischetto</span>
+    <button class="dropdown-toggler" type="button" (click)="toggle()">
+      <img class="avatar" alt="avatar" [src]="userInfo.avatar">
+      <span class="username">{{ userInfo.fullName }}</span>
     </button>
-    <ul class="dropdown-menu" [class.show]="dropdown.show">
+    <ul class="dropdown-menu" [class.show]="dropdownShow">
       <li class="dropdown-item">
-        <a>
+        <a [routerLink]="['/user/profile', userInfo.UID]">
           <i class="icon"></i>
           <span>Meu Pefil</span>
         </a>
       </li>
       <li class="dropdown-item">
-        <a>
+        <a [routerLink]="['/user/preferences', userInfo.UID]">
           <i class="icon"></i>
           <span>As Minhas Preferências</span>
         </a>
       </li>
-      <li class="dropdown-item">
-        <a>
+      <li class="dropdown-item divisor">
+        <a href="#" (click)="logout()">
           <i class="icon"></i>
           <span>Terminar Sessão</span>
         </a>
