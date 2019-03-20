@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
     avatar: 'assets/avatar.png'
   };
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
