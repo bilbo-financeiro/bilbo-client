@@ -22,12 +22,11 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class SideMenuComponent implements OnInit {
 
-  public expanded = false;
+  public expanded = true;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   public toggle(): void {
     this.expanded = !this.expanded;

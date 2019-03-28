@@ -10,9 +10,15 @@
     transition: 0.2s;
   }
 
-  .side-menu-toggler {
-    text-align: center;
-    border: none;
+  .header-side-menu {
+    .side-menu-toggler {
+      text-align: center;
+      border: none;
+    }
+    a,
+    .favorite-toggler {
+      cursor: pointer;
+    }
   }
 
   .side-menu-items {

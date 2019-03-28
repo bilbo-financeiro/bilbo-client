@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { AuthComponent } from './auth/auth.component';
+import { OverviewComponent } from './overview/overview.component';
 
 const routes: Routes = [
   {
-    path: 'authentication',
-    component: AuthComponent
-  },
-  {
     path: '',
-    component: AppComponent
+    component: OverviewComponent
   }
 ];
 

@@ -1,12 +1,18 @@
 <div class="side-menu" [class.expanded]="expanded">
-  <button class="side-menu-toggler" type="button" (click)="toggle()">
-    tooggle
-    <i class="icon"></i>
-  </button>
+  <div class="header-side-menu">
+    <button class="side-menu-toggler" type="button" (click)="toggle()">
+      <i class="material-icons menu"></i>
+    </button>
+    <span class="title" *ngIf="expanded" [@togglerAnimation]>Navegação</span>
+    <a class="favorite" [class.active]="true" *ngIf="expanded" [@togglerAnimation]>
+      <i></i>
+      start
+    </a>
+  </div>
 
   <ul class="side-menu-items" *ngIf="expanded" [@togglerAnimation]>
     <li class="side-menu-item">
-      <a routerLink="/overview">
+      <a [routerLink]="['']">
         <i class="icon"></i>
         <span>Overview</span>
       </a>
