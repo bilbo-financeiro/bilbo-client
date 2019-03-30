@@ -4,21 +4,19 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { OverviewComponent } from './overview/overview.component';
 
+import { CoreModule } from './@core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    OverviewComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    SharedModule,
+    CoreModule,
     FormsModule,
+    SharedModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
