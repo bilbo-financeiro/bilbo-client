@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { OverviewComponent } from './overview/overview.component';
-
 const routes: Routes = [
   {
-    path: '',
-    component: OverviewComponent
-  }
+    path: 'login',
+    loadChildren: './modules/security/login/login.module#LoginModule'
+  },
+  { path: 'pages', loadChildren: './pages/pages.module#PagesModule' },
+  { path: '**', loadChildren: './modules/not-found/not-found.module#NotFoundModule' }
 ];
 
 @NgModule({
