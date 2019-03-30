@@ -1,14 +1,5 @@
-<div class="wrapper">
-  <header class="header">
-    <app-header-menu [userInfo]="userInfo"></app-header-menu>
-  </header>
+<button class="" [routerLink]="['login']">login</button>
+<button class="" [routerLink]="['pages']">pages</button>
+<button class="" [routerLink]="['asdasdasd']">not found</button>
 
-  <div class="content">
-    <aside class="sidebar">
-      <app-side-menu></app-side-menu>
-    </aside>
-    <main class="main">
-      <router-outlet></router-outlet>
-    </main>
-  </div>
-</div>
+<router-outlet></router-outlet>

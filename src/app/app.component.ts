@@ -8,13 +8,6 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit {
 
-  public brand = 'https://boygeniusreport.files.wordpress.com/2018/06/screen-shot-2018-06-08-at-11-28-42-am.png?w=782';
-  public userInfo = {
-    UID: 30030,
-    fullName: 'Felipe Francischetto',
-    avatar: 'assets/avatar.png'
-  };
-
   ngOnInit(): void { }
 
 }
