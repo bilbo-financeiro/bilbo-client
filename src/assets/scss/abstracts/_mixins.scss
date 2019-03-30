@@ -1,0 +1,81 @@
+/* #region ####################### MIXIN DE BREAKPOINTS ####################### */
+
+// Pequenos dispositivos
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Dispositivos médios
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Grandes dispositivos
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+// Dispositivos extra grandes
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// Dispositivos personalizados
+@mixin rwd($screen) {
+    @media (min-width: $screen + "px") {
+        @content;
+    }
+}
+
+/* #endregion */
+
+/* #region ####################### MIXIN UTEIS ################################ */
+
+@mixin align($vertical: true, $horizontal: false, $position: relative) {
+    @if $position {
+        position: $position;
+    }
+
+    @if $vertical {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @if $horizontal {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin pseudo($pos: absolute, $display: block, $content: "") {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin buttonInvert($primary, $secundary) {
+    border-color: $primary;
+    color: $primary;
+
+    &:hover {
+        background: $primary;
+        color: $secundary;
+    }
+}
+
+/* #endregion */

@@ -1,0 +1,11 @@
+/* #region #################### FUNÇÃO PARA Z-INDEX #################### */
+@function z-index($name) {
+    @if index($z-indexes, $name) {
+        @return length($z-indexes) - index($z-indexes, $name) + 1;
+    }
+    @else {
+        @warn 'Não há item "#{$name}" nesta lista; escolha um dos: #{$z-indexes}';
+        @return null;
+    }
+}
+/* #endregion */

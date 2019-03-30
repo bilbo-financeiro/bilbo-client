@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+/* #region ############################ VARIAVEIS DE BREAKPOINTS ############################ */
+
+/* Pequenos tablets e grandes smartphones (vista de paisagem) */
+$screen-sm-min: 576px;
+
+/* Pequenos tablets (vista de retrato) */
+$screen-md-min: 768px;
+
+/* Tablets e pequenos desktops */
+$screen-lg-min: 992px;
+
+/* tablets grandes e desktops */
+$screen-xl-min: 1200px;
+
+/* #endregion */
+
+/* #region ############################ ARRAY DE CORES ###################################### */
+$color-primary:     rgba(46, 26, 70, 1);
+$color-secundary:   rgba(255, 221, 1, 1);
+$color-black:       rgba(8, 10, 14, 1);
+$color-black-light: rgba(20, 23, 27, 1);
+$color-white:       rgba(255, 255, 255, 1);
+$color-gray:        rgba(139, 145, 160, 1);
+$color-blue:        rgba(33, 150, 243, 1);
+$color-red:         rgba(217, 83, 79, 1);
+$color-mustard:     rgba(255, 193, 7, 1);
+$color-green:       rgba(0, 128, 0, 1);
+$color-light-gray:  rgba(243, 242, 244, 1);
+$color-dark-gray:   rgba(29, 33, 39, 1);
+
+$colors: ("primary": $color-primary, "black": $color-black, "white": $color-white, "gray": $color-gray) !default;
+
+/* #endregion */
+
+/* #region ############################ ARRAY DE Z-INDEXS ################################### */
+
+$z-indexes: "site-header", "site-footer";
+
+/* #endregion */
+
+/* #region ############################ FONT ############################################## */
+
+$font-family: "Open Sans", sans-serif;
+
+/* #endregion */
+
+/* #region ############################ GRID ############################################## */
+
+$grid-gutter: 1%;
+$grid-columns: 12;
+
+/* #endregion */
