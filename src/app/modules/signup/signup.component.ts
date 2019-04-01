@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { SignupService } from './signup.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,9 @@ export class SignupComponent implements OnInit {
 
   public signupForm: FormGroup;
 
-  constructor() { }
+  constructor(
+    private signupSerivce: SignupService
+  ) { }
 
   ngOnInit() {
     this.initSignupForm();
@@ -43,5 +46,14 @@ export class SignupComponent implements OnInit {
       }
     }
   }
+
+  createUser(): void {
+    const formValue = this.signupForm.value;
+
+    delete formValue.confirmPassword;
+
+    this.signupSerivce.insert(formValue);
+  }
+
 
 }

@@ -23,7 +23,11 @@
     <label>Confirmação de Senha</label>
     <input type="text" formControlName="confirmPassword">
   </div>
+
+  <button (click)="createUser()" [disabled]="signupForm.invalid">Salvar</button>
+
 </form>
+
 
 <pre>
   value: {{ signupForm.value | json }}

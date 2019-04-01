@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
+import { SignupService } from './signup.service';
+
 import { SignupComponent } from './signup.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const ROUTES: Routes = [
   { path: '', component: SignupComponent }
@@ -17,6 +18,7 @@ const ROUTES: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(ROUTES)
-  ]
+  ],
+  providers: [SignupService]
 })
 export class SignupModule { }
