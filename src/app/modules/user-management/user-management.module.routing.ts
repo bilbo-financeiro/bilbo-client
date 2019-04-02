@@ -8,11 +8,11 @@ import { ProfileComponent } from './profile/profile.component';
 
 const ROUTE: Routes = [
   {
-    path: ':_id',
+    path: '',
     component: UserManagementComponent,
     children: [
-      { path: 'preferences', component: PreferencesComponent },
-      { path: 'profile', component: ProfileComponent }
+      { path: 'preferences/:_id', component: PreferencesComponent },
+      { path: 'profile/:_id', component: ProfileComponent }
     ]
   }
 ];

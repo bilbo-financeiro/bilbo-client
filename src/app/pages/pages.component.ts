@@ -11,7 +11,7 @@ export class PagesComponent implements OnInit {
   public userInfo = {
     UID: 30030,
     fullName: 'Felipe Francischetto',
-    avatar: 'assets/avatar.png'
+    avatar: 'assets/icons/avatar.png'
   };
 
   constructor() { }
