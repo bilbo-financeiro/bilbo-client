@@ -1,3 +1,12 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="loginForm">
+  <div class="form-control">
+    <label>Usuário</label>
+    <input type="text" formControlName="username">
+  </div>
+  <div class="form-control">
+    <label>Senha</label>
+    <input type="text" formControlName="password">
+  </div>
+
+  <button (click)="login()" [disabled]="loginForm.invalid">Entrar</button>
+</form>
