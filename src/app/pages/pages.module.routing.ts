@@ -7,6 +7,7 @@ const ROUTE: Routes = [
   {
     path: 'pages',
     component: PagesComponent,
+    canActivate: [ ],
     children: [
       { path: 'overview', loadChildren: '../modules/overview/overview.module#OverviewModule' }
     ]

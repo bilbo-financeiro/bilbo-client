@@ -53,6 +53,7 @@ export class SignupComponent implements OnInit {
     delete formValue.confirmPassword;
 
     this.signupSerivce.insert(formValue);
+    console.log('ta osso');
   }
 
 
