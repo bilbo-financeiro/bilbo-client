@@ -31,4 +31,8 @@ export class LoginComponent implements OnInit {
     this.authService.authentication('felipe-matteus@hotmail.com', '61195344');
   }
 
+  logout(): void {
+    this.authService.logout();
+  }
+
 }
