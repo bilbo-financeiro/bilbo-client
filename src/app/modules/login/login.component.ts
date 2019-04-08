@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 import { AuthService } from 'src/app/@core/services/auth.service';
 
 @Component({
@@ -27,7 +28,6 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    console.log(this.loginForm.value);
     this.authService.authentication('felipe-matteus@hotmail.com', '61195344');
   }
 
