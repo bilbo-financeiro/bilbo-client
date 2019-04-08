@@ -12,9 +12,15 @@
 
   <ul class="side-menu-items" *ngIf="expanded" [@togglerAnimation]>
     <li class="side-menu-item">
-      <a [routerLink]="['overview']">
+      <a [routerLink]="['overview']" [routerLinkActive]="'active'">
         <i class="icon"></i>
         <span>Overview</span>
+      </a>
+    </li>
+    <li class="side-menu-item">
+      <a [routerLink]="['planning']" [routerLinkActive]="'active'">
+        <i class="icon"></i>
+        <span>Planning</span>
       </a>
     </li>
   </ul>

@@ -7,7 +7,7 @@ import { AuthGuardService } from '../@core/guards/auth.guard';
 const ROUTE: Routes = [
   {
     path: 'login',
-    loadChildren: '../modules/security/login/login.module#LoginModule'
+    loadChildren: '../modules/login/login.module#LoginModule'
   },
   {
     path: 'signup',
@@ -15,11 +15,14 @@ const ROUTE: Routes = [
   },
   {
     path: 'pages',
+    pathMatch: 'prefix',
     component: PagesComponent,
     canActivate: [AuthGuardService],
     children: [
       { path: '', redirectTo: 'overview', pathMatch: 'full' },
-      { path: 'overview', loadChildren: '../modules/overview/overview.module#OverviewModule' }
+      { path: 'overview', loadChildren: '../modules/overview/overview.module#OverviewModule' },
+      { path: 'planning', loadChildren: '../modules/financial-planning/financial-planning.module#FinancialPlanningModule' },
+      { path: 'user', loadChildren: '../modules/user-management/user-management.module#UserManagementModule' }
     ]
   }
 ];

@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     BrowserAnimationsModule,

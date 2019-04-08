@@ -1,5 +1,5 @@
 <nav #header class="header-menu">
-  <a href="#" title="bilbo">
+  <a [routerLink]="['overview']" title="bilbo">
     <img class="brand" alt="logo" width="50" src="assets/icons/bilbo.png">
   </a>
   <div #dropdown class="dropdown">
@@ -21,7 +21,7 @@
         </a>
       </li>
       <li class="dropdown-item divisor">
-        <a href="#" (click)="logout()">
+        <a (click)="logout()">
           <i class="icon"></i>
           <span>Terminar Sessão</span>
         </a>

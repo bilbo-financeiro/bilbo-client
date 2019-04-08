@@ -27,6 +27,9 @@
     .side-menu-item {
       width: 100%;
       list-style-type: none;
+      &.active {
+        background-color: red;
+      }
       &:hover {
         background-color: #171F2E;
       }

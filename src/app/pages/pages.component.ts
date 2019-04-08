@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+import { slideInAnimation } from './../shared/animations/transition';
+
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.scss']
+  styleUrls: ['./pages.component.scss'],
+  animations: [slideInAnimation]
 })
 export class PagesComponent implements OnInit {
 
@@ -17,5 +20,9 @@ export class PagesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
+
+  prepareRoute(outlet: any) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
 
 }
