@@ -1,23 +1,28 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
 
-import { AuthService } from '../services/auth.service';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class AuthGuardService implements CanActivate {
   constructor(
-    private authService: AuthService,
+    private angularFireAuth: AngularFireAuth,
     private router: Router
   ) { }
 
-  public async canActivate() {
-    const isAuth = this.authService.verifyAutenthication();
+  public canActivate() {
+    return this.angularFireAuth.idTokenResult
+      .pipe(
+        map((tolken) => this.redirectForLogin(tolken))
+      );
+  }
 
-    if (!isAuth) {
+  public redirectForLogin(tolken): boolean {
+    if (!tolken) {
       this.router.navigate(['login']);
     }
-
-    return isAuth;
+    return tolken ? true : false;
   }
 
 }
