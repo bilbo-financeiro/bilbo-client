@@ -9,13 +9,13 @@
     </button>
     <ul class="dropdown-menu" [class.show]="dropdownShow">
       <li class="dropdown-item">
-        <a [routerLink]="['/user/profile', userInfo.UID]">
+        <a [routerLink]="['user/profile', userInfo.UID]">
           <i class="icon"></i>
           <span>Meu Pefil</span>
         </a>
       </li>
       <li class="dropdown-item">
-        <a [routerLink]="['/user/preferences', userInfo.UID]">
+        <a [routerLink]="['user/preferences', userInfo.UID]">
           <i class="icon"></i>
           <span>As Minhas Preferências</span>
         </a>
