@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Router } from '@angular/router';
 
 import { Observable } from 'rxjs';
 import { auth } from 'firebase';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +19,10 @@ export class AuthService {
 
   public async logout() {
     await this.angularFireAuth.auth.signOut();
+  }
+
+  public isAuth(): Observable<auth.IdTokenResult | null> {
+    return this.angularFireAuth.idTokenResult;
   }
 
 }
