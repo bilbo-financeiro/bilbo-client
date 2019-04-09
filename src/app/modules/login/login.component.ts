@@ -4,8 +4,6 @@ import { Router } from '@angular/router';
 
 import { AuthService } from 'src/app/@core/services/auth.service';
 
-import { map } from 'rxjs/operators';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -34,10 +32,6 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.authService.authentication('felipe-matteus@hotmail.com', '61195344')
     .then(() => this.router.navigate(['pages']));
-  }
-
-  logout(): void {
-    this.authService.logout();
   }
 
 }

@@ -1,13 +1,21 @@
-<form [formGroup]="loginForm">
-  <div class="form-control">
-    <label>Usuário</label>
-    <input type="text" formControlName="username">
-  </div>
-  <div class="form-control">
-    <label>Senha</label>
-    <input type="text" formControlName="password">
-  </div>
+<div class="content">
 
-  <button (click)="login()" [disabled]="loginForm.invalid">Entrar</button>
-  <button (click)="logout()">Sair</button>
-</form>
+  <form [formGroup]="loginForm">
+
+    <div class="form-control">
+      <label>Usuário</label>
+      <input type="text" formControlName="username">
+    </div>
+
+    <div class="form-control">
+      <label>Senha</label>
+      <input type="text" formControlName="password">
+    </div>
+
+    <button (click)="login()" [disabled]="loginForm.invalid">Entrar</button>
+
+    <a [routerLink]="['/signup']">Cadastrar-se</a>
+
+  </form>
+
+</div>
