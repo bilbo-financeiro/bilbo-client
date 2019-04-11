@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 
-import { CoreModule } from '../@core/core.module';
 import { PagesRoutingModule } from './pages.module.routing';
 import { PageComponentsModule } from './components/components.module';
 

@@ -1,0 +1,27 @@
+.btn {
+  &.button-secondary {
+    background: white;
+    border: 1px solid $ob-button-border-color;
+    color: $ob-disable-text-color;
+    &.selected,
+    &:hover {
+      border-color: var(--main);
+      color: var(--main);
+      box-shadow: none;
+    }
+    &.disabled {
+      background: $ob-input-border-color;
+      color: white;
+      border-color: $ob-input-border-color;
+    }
+  }
+}
+
+.btn-ok {
+  font-weight: 700;
+  border: 1px solid #4baf4f;
+  line-height: 26px;
+  height: 26px;
+  border-radius: 3px;
+  color: #4baf4f !important;
+}

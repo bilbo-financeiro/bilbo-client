@@ -1,13 +1,38 @@
-/* ############ ABSTRACT ################### */
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'abstracts/functions';
-@import 'abstracts/placeholders';
-
 /* ############ BASE ####################### */
 @import 'base/typography';
-@import 'base/normelize';
+@import 'base/normalize';
 @import 'base/helpers';
 @import 'base/grid';
 
 /* ############ COMPONENTS ################# */
+@import 'variables';
+@import 'components/colors';
+@import 'mixins';
+@import 'animations';
+@import 'navbar';
+@import 'buttons';
+@import 'form-controls';
+@import 'language-group';
+@import 'headings';
+@import 'search-filter';
+@import 'widths';
+@import 'loader';
+@import 'modal';
+@import 'popup';
+@import 'notification';
+@import 'page-header';
+@import 'content-area';
+@import 'dynamic-tooltip';
+@import 'side-navigation';
+@import 'side-panel';
+@import 'tabs';
+@import 'ratings';
+@import 'breadcrumb';
+@import 'dropdown';
+@import 'alert';
+@import 'tooltip';
+@import 'auto-tooltip';
+@import 'margin-padding';
+@import 'custom';
+@import 'components/components';
+@import 'components/drag-drop';

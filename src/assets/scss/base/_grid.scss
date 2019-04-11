@@ -1,8 +1,21 @@
-// debugger css do grid - para debugar só descomentar
-// [class*="grid-"] {
-//     background: lightgray;
-//     outline: 1px solid gray;
-// }
+$screen-sm-min: 576px;
+
+/* Pequenos tablets (vista de retrato) */
+$screen-md-min: 768px;
+
+/* Tablets e pequenos desktops */
+$screen-lg-min: 992px;
+
+/* tablets grandes e desktops */
+$screen-xl-min: 1200px;
+
+/* #region ############################ ARRAY DE Z-INDEXS ################################### */
+
+$z-indexes: "site-header", "site-footer";
+
+
+$grid-gutter: 1%;
+$grid-columns: 12;
 
 [class*="grid-"] {
     display: inline-block;
