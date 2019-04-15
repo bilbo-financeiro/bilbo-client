@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/536315-istock-623292382.jpg?itok=tQlA418-&resize=1100x1100) no-repeat center center;
+  background: url('../../../assets/images/backgrounds/background-login.jpg') no-repeat center center;
   background-size: cover;
   &::before {
     content: '';
@@ -40,15 +40,15 @@
     }
     .body {
       padding: 10px 40px 10px 40px;
-      .btn {
-        padding: 0px 20px;
-        margin-top: 10px;
-      }
-      .btn > .btn-link {
-        align-self: flex-end;
+      .form-buttons {
+        display: flex;
+        flex-direction: column;
+        .btn {
+          margin: 8px;
+        }
       }
     }
-    .footer {
+    .footer-card {
       padding: 15px 40px 15px 40px;
       background-color: #F6F7F9;
       color: #333;

@@ -1,6 +1,9 @@
 <div class="content">
 
   <div class="card-login">
+<!--
+    <pre>{{ loginForm.value | json }}</pre>
+    <pre>{{ loginForm.valid | json }}</pre> -->
 
     <div class="header">
       <img src="assets/icons/bilbo.png" alt="brand">
@@ -9,24 +12,24 @@
     </div>
 
     <div class="body">
-      <form #loginForm [formGroup]="loginForm">
-        <div class="form-group">
+      <form [formGroup]="loginForm">
+        <div class="form-group" [class.error]="loginForm.get('username').invalid && loginForm.get('username').dirty">
           <label>Usuário</label>
           <input #username class="form-control" type="text" name="username" formControlName="username">
         </div>
-        <div class="form-group">
+        <div class="form-group" [class.error]="loginForm.get('password').invalid && loginForm.get('password').dirty">
           <label>Senha</label>
           <input #password class="form-control" type="text" name="password" formControlName="password">
         </div>
       </form>
-      <div class="form-buttons" for="loginForm">
+      <div class="form-buttons">
         <button class="btn btn-link">Esqueci minha senha</button>
-        <button class="btn btn-primary" (click)="login()">Iniciar Sessão</button>
+        <button class="btn btn-primary" (click)="login();">Iniciar Sessão</button>
       </div>
       <!-- <button class="btn btn-link" [routerLink]="['/signup']">Cadastrar-se</button> -->
     </div>
 
-    <div class="footer">
+    <div class="footer-card">
       <div class="footer-title">Aviso de Segurança</div>
       <ul>
         <li>Mantenha as suas credencias privadas e confidencias;</li>

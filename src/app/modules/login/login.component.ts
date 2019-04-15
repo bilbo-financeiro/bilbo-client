@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/@core/services/auth.service';
 export class LoginComponent implements OnInit {
 
   public loginForm: FormGroup;
+  public hasError: boolean | null;
 
   constructor(
     private authService: AuthService,
@@ -24,8 +25,8 @@ export class LoginComponent implements OnInit {
 
   initLoginForm(): void {
     this.loginForm = new FormGroup({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required)
+      username: new FormControl(null, Validators.required),
+      password: new FormControl(null, Validators.required)
     });
   }
 
