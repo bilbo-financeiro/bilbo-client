@@ -1,5 +1,11 @@
 /* ======================================= Form Control Elements Style ======================================= */
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .form-control {
   padding: 0 10px;
   font-size: $input-font-size;
@@ -502,6 +508,8 @@ input[type=number] {
 }
 
 .form-group {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 0;
   label {
     font-size: $formgroup-label-font-size;

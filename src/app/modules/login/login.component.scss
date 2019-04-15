@@ -1,67 +1,82 @@
 .content {
-  background-image: #4E4076 url("https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/536315-istock-623292382.jpg?itok=tQlA418-&resize=1100x1100") no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/536315-istock-623292382.jpg?itok=tQlA418-&resize=1100x1100) no-repeat center center;
   background-size: cover;
-  font-family: "Roboto";
   &::before {
-    z-index: -1;
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(78, 64, 118, 0.8);
+    background: rgba(61, 50, 92, 0.9);
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
   }
-}
 
-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: #fff;
-  width: 285px;
-  margin: -140px 0 0 -182px;
-  padding: 40px;
-  box-shadow: 0 0 3px rgba(0,0,0,.3);
-  & h2 {
-    margin: 0 0 20px;
-    line-height: 1;
-    color: #4E4076;
-    font-size: 18px;
-    font-weight: 400;
-  }
-  & input {
-    outline: none;
-    display: block;
-    width: 100%;
-    margin: 0 0 20px;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    color: #ccc;
-    font-family: "Roboto";
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 400;
-    transition: 0.2s linear;
-    &:focus {
+  .card-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    width: 450px;
+    height: 510px;
+    background: #fff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    .header {
+      color: rgba(61, 50, 92, 0.9);
+      font-size: 12px;
+      padding: 40px;
+      .header-title {
+        padding-bottom: 8px;
+        font-size: 16px;
+        font-weight: 800;
+      }
+      img {
+        height: 50px;
+      }
+    }
+    .body {
+      padding: 10px 40px 10px 40px;
+      .btn {
+        padding: 0px 20px;
+        margin-top: 10px;
+      }
+      .btn > .btn-link {
+        align-self: flex-end;
+      }
+    }
+    .footer {
+      padding: 15px 40px 15px 40px;
+      background-color: #F6F7F9;
       color: #333;
-      border: 1px solid #4E4076;
+      bottom: 0;
+      font-size: 11px;
+      .footer-title {
+        font-size: 14px;
+      }
+      ul {
+        display: block;
+        margin: 10px 0px 0px 17px;
+        list-style-type: disc;
+        li {
+          margin-top: 8px;
+        }
+      }
     }
   }
 
-  & button {
-    cursor: pointer;
-    background: #4E4076;
-    width: 100%;
-    padding: 10px 15px;
-    border: 0;
+  .footer-login {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    padding-top: 8px;
+    font-size: 10px;
     color: #fff;
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: 400;
-    transition: 0.2s linear;
-    &:hover {
-      background: #4E4076;
-    }
   }
 }
+
+
