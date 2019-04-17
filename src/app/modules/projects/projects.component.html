@@ -1,6 +1,9 @@
 <section class="content">
 
   <div class="wishes-form">
+    <div class="total">
+      <h3>total: {{ total }}</h3>
+    </div>
     <form [formGroup]="wishesForm">
       <div class="form-group">
         <label>Name</label>
@@ -17,10 +20,10 @@
   </div>
 
   <div class="wishes-list">
-    <div class="wish-item" *ngFor="let wish of wishesList; let index = index;">
+    <div class="wish-item" *ngFor="let wish of wishesList | async">
       <div class="wish-name">{{ wish.name }}</div>
       <div class="wish-value">{{ wish.value }}</div>
-      <button class="btn btn-warning" (click)="removeWish(index)">Remover</button>
+      <button class="btn btn-warning" (click)="removeWish(wish.key)">Remover</button>
     </div>
   </div>
 
