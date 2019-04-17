@@ -23,4 +23,4 @@ deploy:
   github_token: 2d3cf7a7c94305a6f23f3b30cad2b9d5cabbb1f4
   local_dir: dist/bilbo-client
   on:
-    branch: feature
+    branch: gh-pages
