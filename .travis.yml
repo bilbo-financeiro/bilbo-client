@@ -13,12 +13,10 @@ cache:
     - node_modules
 
 install:
-  - npm install -g yarn
+  - npm install
 
 script:
-  - yarn lint
-  - yarn build --base-href /bilbo-client/
-  - mv dist/bilbo-client/index.html dist/bilbo-client/404.html
+  - ng build --base-href /bilbo-client
 deploy:
   provider: pages
   skip_cleanup: true
