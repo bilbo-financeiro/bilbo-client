@@ -18,6 +18,7 @@ install:
 script:
   - ng --version
   - ng build --base-href https://felipefrancischetto.github.io/bilbo-client/
+  - mv dist/bilbo-client/index.html dist/bilbo-client/404.html
 deploy:
   provider: pages
   skip_cleanup: true
