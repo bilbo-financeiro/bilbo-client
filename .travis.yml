@@ -16,6 +16,7 @@ install:
   - npm install
 
 script:
+  - ng --version
   - ng build --base-href https://felipefrancischetto.github.io/bilbo-client/
 deploy:
   provider: pages
