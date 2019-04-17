@@ -1,11 +1,12 @@
-$primary-color: #003C80;
-$primary-color-hover: #003066;
+@import '../../../../assets/scss/variables';
+
+$primary-color-hover: #2C2442;
 
 .header-menu {
 
   display: flex;
   justify-content: space-between;
-  background: $primary-color;
+  background: $theme-color;
 
   .brand {
     width: 50px;
@@ -13,12 +14,19 @@ $primary-color-hover: #003066;
 
   .dropdown {
     .dropdown-toggler {
-      background-color: $primary-color;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      width: 260px;
+      background-color: $theme-color;
       border: none;
-      align-items: baseline;
+      align-items: center;
       cursor: pointer;
       .avatar {
-        width: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 28px;
         border-radius: 50%;
       }
       .username {
@@ -36,10 +44,13 @@ $primary-color-hover: #003066;
 
     .dropdown-menu {
       display: none;
+      width: 260px;
+      height: 260px;
+      background-color: #fff;
       &.show {
         display: block;
         position: absolute;
-        top: 38px;
+        top: 53px;
         right: 0;
       }
     }
