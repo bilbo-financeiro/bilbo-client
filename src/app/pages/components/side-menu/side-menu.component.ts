@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
+import { PAGES_MENU } from './side-menu.constant';
+import { PagesMenu } from './side-menu.models';
+
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
@@ -22,14 +25,14 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class SideMenuComponent implements OnInit {
 
-  public expanded = true;
+  public pageMenulist: PagesMenu = PAGES_MENU;
 
   constructor() { }
 
   ngOnInit() { }
 
   public toggle(): void {
-    this.expanded = !this.expanded;
+    this.pageMenulist.expanded = !this.pageMenulist.expanded;
   }
 
 }
