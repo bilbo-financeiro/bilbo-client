@@ -22,6 +22,7 @@ const ROUTE: Routes = [
       { path: '', redirectTo: 'overview', pathMatch: 'full' },
       { path: 'overview', loadChildren: '../modules/overview/overview.module#OverviewModule' },
       { path: 'planning', loadChildren: '../modules/financial-planning/financial-planning.module#FinancialPlanningModule' },
+      { path: 'projects', pathMatch: 'prefix', loadChildren: '../modules/projects/projects.module#ProjectsModule' },
       { path: 'user', loadChildren: '../modules/user-management/user-management.module#UserManagementModule' }
     ]
   }
