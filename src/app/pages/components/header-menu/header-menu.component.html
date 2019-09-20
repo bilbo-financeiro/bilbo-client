@@ -4,26 +4,29 @@
   </a>
   <div #dropdown class="dropdown">
     <button class="dropdown-toggler" type="button" (click)="toggle()">
-      <img class="avatar" alt="avatar" [src]="userInfo.avatar">
-      <span class="username">{{ userInfo.fullName }}</span>
-      <img class="avatar" alt="avatar" [src]="userInfo.avatar">
+      <div class="toogle-name">
+        <span class="avatar-name">{{ 'FF' | uppercase }}</span>
+        <!-- <img class="avatar" alt="avatar" [src]="userInfo.avatar"> -->
+        <span class="username">{{ userInfo.fullName }}</span>
+      </div>
+      <i [ngClass]="dropdownShow ? 'fas fa-angle-up' : 'fas fa-angle-down'"></i>
     </button>
     <ul class="dropdown-menu" [class.show]="dropdownShow">
       <li class="dropdown-item">
         <a [routerLink]="['user/profile', userInfo.UID]">
-          <i class="icon"></i>
+          <i class="fas fa-user-circle"></i>
           <span>Meu Pefil</span>
         </a>
       </li>
       <li class="dropdown-item">
         <a [routerLink]="['user/preferences', userInfo.UID]">
-          <i class="icon"></i>
+          <i class="fas fa-cog"></i>
           <span>As Minhas Preferências</span>
         </a>
       </li>
-      <li class="dropdown-item divisor">
+      <li class="dropdown-item">
         <a (click)="logout()">
-          <i class="icon"></i>
+          <i class="fas fa-power-off"></i>
           <span>Terminar Sessão</span>
         </a>
       </li>

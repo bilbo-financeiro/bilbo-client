@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-financial-planning',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinancialPlanningComponent implements OnInit {
 
-  constructor() { }
+  public planningForm: FormGroup;
 
-  ngOnInit() {
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { }
+
+  ngOnInit(): void {
+    this.initForm();
+  }
+
+  public initForm(): void {
+    this.planningForm = this.formBuilder.group({
+      name: '',
+      value: 0,
+      type: PlanningItem.Active,
+      category: '',
+    });
   }
 
 }
+enum PlanningItem {
+  Active = 'active',
+  Passive = 'passive'
+}
+

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 import { PAGES_MENU } from './side-menu.constant';
-import { PagesMenu } from './side-menu.models';
+import { PagesMenu, Menu } from './side-menu.models';
 
 @Component({
   selector: 'app-side-menu',
@@ -12,12 +12,12 @@ import { PagesMenu } from './side-menu.models';
     trigger(
       'togglerAnimation', [
         transition(':enter', [
-          style({transform: 'translateX(100%)', opacity: 0}),
-          animate('250ms', style({transform: 'translateX(0)', opacity: 1}))
+          style({ opacity: 0 }),
+          animate('200ms', style({ opacity: 1 }))
         ]),
         transition(':leave', [
-          style({transform: 'translateX(0)', opacity: 1}),
-          animate('250ms', style({transform: 'translateX(100%)', opacity: 0}))
+          style({ opacity: 1 }),
+          animate('200ms', style({ opacity: 0 }))
         ])
       ]
     )
@@ -31,8 +31,20 @@ export class SideMenuComponent implements OnInit {
 
   ngOnInit() { }
 
+  public getPageMenuList(): Menu[] {
+    return this.pageMenulist.showFavoriteList
+      ? this.pageMenulist.favoriteList
+      : this.pageMenulist.menuList;
+  }
+
   public toggle(): void {
     this.pageMenulist.expanded = !this.pageMenulist.expanded;
   }
+
+  public toogleFavorite(): void {
+    this.pageMenulist.showFavoriteList = !this.pageMenulist.showFavoriteList;
+  }
+
+
 
 }

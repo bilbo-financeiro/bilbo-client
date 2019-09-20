@@ -23,7 +23,8 @@ const ROUTE: Routes = [
       { path: 'overview', loadChildren: '../modules/overview/overview.module#OverviewModule' },
       { path: 'planning', loadChildren: '../modules/financial-planning/financial-planning.module#FinancialPlanningModule' },
       { path: 'projects', pathMatch: 'prefix', loadChildren: '../modules/projects/projects.module#ProjectsModule' },
-      { path: 'user', loadChildren: '../modules/user-management/user-management.module#UserManagementModule' }
+      { path: 'user', loadChildren: '../modules/user-management/user-management.module#UserManagementModule' },
+      { path: 'goals', loadChildren: '../modules/goals/goals.module#GoalsModule' }
     ]
   }
 ];
