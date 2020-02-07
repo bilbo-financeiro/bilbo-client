@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
+  public value = '';
+
   constructor() { }
 
   ngOnInit() {

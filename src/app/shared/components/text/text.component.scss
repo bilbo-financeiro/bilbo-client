@@ -1,0 +1,68 @@
+@import '../../../../assets/scss/base/colors';
+
+.lib-input {
+  border: 1px solid #C8CED1;
+  border-radius: 2px;
+  height: 32px;
+  transition: 0.2s linear;
+  background-color: #FFF;
+
+  &.xs-small {
+    width: 75px;
+  }
+
+  &.small {
+    width: 115px;
+  }
+
+  &.medium {
+    width: 250px;
+  }
+
+  &.large {
+    width: 385px;
+  }
+
+  &.extralarge {
+    height: 320px;
+  }
+
+  &:not(.disabled):hover,
+  &:not(.disabled):focus-within {
+    outline: none;
+
+    &.error {
+      border-color: #FF0000;
+    }
+
+    &:not(.error) {
+      border-color: $theme-color;
+    }
+  }
+
+  &.error {
+    border-color: #FF0000;
+  }
+
+  &.disabled {
+    background-color: #DDE1E3;
+  }
+
+  &.active:not(.error) {
+    border-color: $theme-color;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 2px 0 10px;
+  background-color: transparent;
+  font-size: 11px;
+
+  &:disabled {
+    color: #454950
+  }
+}

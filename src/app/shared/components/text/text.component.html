@@ -1,0 +1,6 @@
+<div class="lib-input"
+  [ngClass]="{ 'small': size == 1, 'medium': size == 2, 'large': size == 3, 'error': invalid , 'disabled': disabled }">
+
+  <input [id]="'txt-' + id" type="text" #textInput>
+
+</div>
