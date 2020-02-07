@@ -1,0 +1,15 @@
+<div (click)="click($event)">
+  <button [id]="'btn-' + id"
+    [ngClass]="{'primary': !type, 'secondary': type == 1, 'save': type == 2, 'icon': type == 3, 'warning': type == 4, 'tertiary': type == 5, 'noIcon': !icon, 'noLabel': !label, 'disabled': disabled}">
+
+    <div *ngIf="icon"  [ngClass]="{'active': iconColor === 1, 'inactive': iconColor === 2}">
+      <i [class]="'fas fa-' + icon"></i>
+    </div>
+
+    <span *ngIf="label">{{ label }}</span>
+
+    <div *ngIf="arrow != null" class="arrow" [class.rotate]="arrow">
+      <i class="obi-angle-up"></i>
+    </div>
+  </button>
+</div>

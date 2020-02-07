@@ -1,28 +1,20 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+import { ButtonComponent } from './components/button/button.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     DropdownComponent,
+    ButtonComponent
   ],
   imports: [
-    BrowserAnimationsModule,
     CommonModule,
-    FormsModule,
-    RouterModule,
-    ReactiveFormsModule,
   ],
   exports: [
-    BrowserAnimationsModule,
     DropdownComponent,
-    FormsModule,
-    RouterModule,
-    ReactiveFormsModule
+    ButtonComponent
   ],
 })
 export class SharedModule { }
