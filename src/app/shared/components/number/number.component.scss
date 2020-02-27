@@ -1,0 +1,139 @@
+@import '../../../../assets/scss/base/colors';
+
+.lib-input {
+  border: 1px solid #C8CED1;
+  border-radius: 2px;
+  height: 32px;
+  transition: 0.2s linear;
+  background-color: #FFF;
+
+  &.xs-small {
+    width: 75px;
+  }
+
+  &.small {
+    width: 115px;
+  }
+
+  &.medium {
+    width: 250px;
+  }
+
+  &.large {
+    width: 385px;
+  }
+
+  &.extralarge {
+    height: 320px;
+  }
+
+  &:not(.disabled):hover,
+  &:not(.disabled):focus-within {
+    outline: none;
+
+    &.error {
+      border-color: #FF0000;
+    }
+
+    &:not(.error) {
+      border-color: $theme-color;
+    }
+  }
+
+  &.error {
+    border-color: #FF0000;
+  }
+
+  &.disabled {
+    background-color: #DDE1E3;
+  }
+
+  &.active:not(.error) {
+    border-color: $theme-color;
+  }
+}
+
+.lib-input {
+  display: flex;
+
+  input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px 0 10px;
+    background-color: transparent;
+    font-size: 11px;
+    text-align: right;
+
+    &:align-left {
+      text-align: left;
+    }
+
+    &:disabled {
+      color: #797f86;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    &:focus{ outline: none; }
+  }
+
+  .group-number-btn {
+    cursor: pointer;
+    width: 32px;
+    font-size: 9px;
+    text-align: center;
+    color: #454950;
+    border-left: 1px solid transparent;
+    transition: 0.2s linear;
+    .number-btn-in {
+      height: 16px;
+      width: 32px;
+      > i::before {
+        top: 2px;
+        position: relative;
+      }
+    }
+    .number-btn-de {
+      height: 16px;
+      width: 32px;
+      > i::before {
+        top: -2px;
+        position: relative;
+      }
+    }
+  }
+  &.disabled {
+    button {
+      pointer-events: none;
+      > i {
+        color: #c8ced1;
+      }
+    }
+
+    .group-number-btn {
+      cursor: default;
+    }
+  }
+
+  &:hover, &:focus-within {
+    &:not(.error):not(.disabled) {
+      border-color: var(--main);
+      .group-number-btn {
+        border-left: 1px solid var(--main);
+        i {
+          color: var(--main);
+        }
+      }
+    }
+  }
+}

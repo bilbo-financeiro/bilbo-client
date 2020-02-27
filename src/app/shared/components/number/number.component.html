@@ -1,0 +1,16 @@
+<div class="lib-input"
+  [ngClass]="{ 'xs-small': size == 1, 'small': size == 2, 'medium': size == 3, 'large': size == 4, 'error': invalid , 'disabled': disabled }">
+  <input #input [id]="'input-number' + id" type="number" name="number" maxlength="11" [class.align-left]="!showArrows"
+    autocomplete="off" [disabled]="disabled" (input)="changeNumber()" (keypress)="onKeyPress($event)"
+    (keydown)="onKeyDown($event)">
+  <div class="group-number-btn" *ngIf="showArrows">
+    <button [id]="'number-btn-in-' + id" type="button" class="number-btn-in" [disabled]="disabled"
+      (click)="incrementOrDecrement('inc')" (mousedown)="onMouseDown($event, 'inc')">
+      <i class="obi-caret-up"></i>
+    </button>
+    <button [id]="'number-btn-de' + id" type="button" class="number-btn-de" [disabled]="disabled"
+      (click)="incrementOrDecrement('dec')" (mousedown)="onMouseDown($event, 'dec')">
+      <i class="obi-caret-down"></i>
+    </button>
+  </div>
+</div>

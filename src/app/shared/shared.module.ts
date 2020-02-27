@@ -1,3 +1,4 @@
+import { NumberComponent } from './components/number/number.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,7 +11,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
   declarations: [
     DropdownComponent,
     ButtonComponent,
-    TextComponent
+    TextComponent,
+    NumberComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
   exports: [
     DropdownComponent,
     ButtonComponent,
-    TextComponent
+    TextComponent,
+    NumberComponent
   ],
 })
 export class SharedModule { }
